@@ -11,7 +11,7 @@ matrix:
                   - unity_branch
                   - csharp_branch
         install: 
-            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
+            - nuget restore DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
             - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
         script: 
             - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
