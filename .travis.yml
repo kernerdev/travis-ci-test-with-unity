@@ -1,26 +1,11 @@
-matrix: 
-    include: 
-# do not install anything extra onto the image
-    -   language: objective-c
-
-# use a Mac OSX image
-        os: osx
-
-# only run builds on pushes to the master branch
-        branches:
-               only:
-                  - master
-                  - unity_branch
-                  - csharp_branch
-# run the script to download and install Unity editor
-        install:
-        - sudo -E sh ./Scripts/install.sh
-
-# run the script for unit tests and builds
-        script:
-        - sudo -E sh ./Scripts/build.sh
-
-# environment variables used in bash scripts
-        env:
-           global:
-           - UNITYCI_PROJECT_NAME="UnityProject"
+language: objective-c
+osx_image: xcode61
+rvm:
+- 2.2
+before_install:
+- chmod a+x ./Scripts/install.sh
+- chmod a+x ./Scripts/build.sh
+install:
+- ./Scripts/install.sh
+script:
+- ./Scripts/build.sh
