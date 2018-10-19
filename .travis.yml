@@ -25,7 +25,7 @@ matrix:
            - UNITYCI_PROJECT_NAME="UnityProject"
     -   language: csharp 
         mono:  
-            - 3.10.0 
+            - 4.1.1 
         solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
         install: 
             - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
