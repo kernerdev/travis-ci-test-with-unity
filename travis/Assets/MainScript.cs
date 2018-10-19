@@ -6,7 +6,7 @@ public class MainScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("apple");
+        Debug.Log("apple")
 	}
 	
 	// Update is called once per frame
