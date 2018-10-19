@@ -17,7 +17,6 @@ ExportedObj/
 .consulo/
 *.csproj
 *.unityproj
-*.sln
 *.suo
 *.tmp
 *.user
@@ -73,7 +72,6 @@ $RECYCLE.BIN/
 # User-specific files
 *.rsuser
 *.userosscache
-*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 
@@ -348,7 +346,6 @@ paket-files/
 
 # JetBrains Rider
 .idea/
-*.sln.iml
 
 # CodeRush personal settings
 .cr/personal
