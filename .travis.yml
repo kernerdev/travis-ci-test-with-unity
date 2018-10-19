@@ -1,3 +1,8 @@
+branches:
+           only:
+              - master
+              - Bence
+              - csharp_branch
 matrix: 
     include: 
 # do not install anything extra onto the image
@@ -7,9 +12,6 @@ matrix:
         os: osx
 
 # only run builds on pushes to the master branch
-        branches:
-           only:
-              - master
 
 # run the script to download and install Unity editor
         install:
