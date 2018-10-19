@@ -15,5 +15,5 @@ matrix:
             - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner 
         script: 
             - xbuild /p:Configuration=Release DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
-            - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/Release/DummyBackendDotNetCore_Test.dll
+            - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/Release/netcoreapp2.1/DummyBackendDotNetCore_Test.dll
     
