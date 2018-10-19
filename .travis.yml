@@ -24,20 +24,3 @@ matrix:
         env:
            global:
            - UNITYCI_PROJECT_NAME="UnityProject"
-    -   language: csharp 
-        mono:  
-            - 4.1.1 
-        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-        
-        branches:
-               only:
-                  - master
-                  - unity_branch
-                  - csharp_branch
-        install: 
-            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
-        script: 
-            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
-    
