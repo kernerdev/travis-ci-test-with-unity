@@ -1,11 +1,23 @@
-language: objective-c
-osx_image: xcode61
-rvm:
-- 2.2
-before_install:
-- chmod a+x ./Scripts/install.sh
-- chmod a+x ./Scripts/build.sh
-install:
-- ./Scripts/install.sh
-script:
-- ./Scripts/build.sh
+matrix:
+    include:
+    -   language: objective-c
+        osx_image: xcode61
+        rvm:
+        - 2.2
+        before_install:
+        - chmod a+x ./Scripts/install.sh
+        - chmod a+x ./Scripts/build.sh
+        install:
+        - ./Scripts/install.sh
+        script:
+        - ./Scripts/build.sh
+    -   language: csharp
+        mono: 
+            - latest
+        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
+        install:
+            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
+            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+        script:
+            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
+            - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
