@@ -1,7 +1,7 @@
 matrix: 
     include: 
 # do not install anything extra onto the image
-    -   language: generic
+    -   language: objective-c
 
 # use a Mac OSX image
         os: osx
