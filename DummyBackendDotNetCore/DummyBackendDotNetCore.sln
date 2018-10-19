@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyBackendDotNetCore", "DummyBackendDotNetCore\DummyBackendDotNetCore.csproj", "{DB034C9F-F407-4939-9C2D-0E7148503D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyBackendDotNetCore_Test", "DummyBackendDotNetCore_Test\DummyBackendDotNetCore_Test.csproj", "{73BB949A-FFE5-4287-8AD6-89F0C033E958}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Debug|x64.ActiveCfg = Debug|x64
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Debug|x64.Build.0 = Debug|x64
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Release|Any CPU.ActiveCfg = Release|x86
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Release|x64.ActiveCfg = Release|x64
+		{DB034C9F-F407-4939-9C2D-0E7148503D3C}.Release|x64.Build.0 = Release|x64
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Debug|x64.ActiveCfg = Debug|x64
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Debug|x64.Build.0 = Debug|x64
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Release|Any CPU.ActiveCfg = Release|x86
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Release|x64.ActiveCfg = Release|x64
+		{73BB949A-FFE5-4287-8AD6-89F0C033E958}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0860809-10C0-42BE-9D0F-E1B0E5C2203E}
+	EndGlobalSection
+EndGlobal

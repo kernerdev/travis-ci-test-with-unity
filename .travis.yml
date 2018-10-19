@@ -3,7 +3,7 @@ matrix:
     -   language: csharp 
         os: osx
         mono: latest 
-        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
+        solution: DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
         
         branches:
                only:
@@ -11,9 +11,9 @@ matrix:
                   - unity_branch
                   - csharp_branch
         install: 
-            - nuget restore DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
+            - nuget restore DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
             - nuget install NUnit.Runners -Version 3.9.0 -OutputDirectory testrunner 
         script: 
-            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/DummyBackendDotNetStandard_Test.dll
+            - xbuild /p:Configuration=Release DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
+            - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/Release/DummyBackendDotNetCore_Test.dll
     
