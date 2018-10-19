@@ -2,8 +2,7 @@ matrix:
     include: 
     -   language: csharp 
         os: osx
-        mono:  
-           - 4.1.1 
+        mono: latest 
         solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
         
         branches:
