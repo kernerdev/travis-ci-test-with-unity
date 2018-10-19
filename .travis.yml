@@ -12,8 +12,8 @@ matrix:
                   - csharp_branch
         install: 
             - nuget restore DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
+            - nuget install NUnit.Runners -Version 3.11.0 -OutputDirectory testrunner 
         script: 
             - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
+            - mono ./testrunner/NUnit.Runners.3.11.0/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
     
