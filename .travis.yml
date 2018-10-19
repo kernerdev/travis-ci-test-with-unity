@@ -13,7 +13,7 @@ matrix:
         - ./Scripts/build.sh
     -   language: csharp
         mono: 
-            - latest
+            - 3.12.0
         solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
         install:
             - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
