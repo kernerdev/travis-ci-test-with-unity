@@ -1,23 +1,36 @@
-matrix:
-    include:
-    -   language: objective-c
-        osx_image: xcode61
-        rvm:
-        - 2.2
-        before_install:
-        - chmod a+x ./Scripts/install.sh
-        - chmod a+x ./Scripts/build.sh
+matrix: 
+    include: 
+# do not install anything extra onto the image
+    -   language: generic
+
+# use a Mac OSX image
+        os: osx
+
+# only run builds on pushes to the master branch
+        branches:
+           only:
+              - master
+
+# run the script to download and install Unity editor
         install:
-        - ./Scripts/install.sh
+        - sudo -E sh ./Scripts/install.sh
+
+# run the script for unit tests and builds
         script:
-        - ./Scripts/build.sh
-    -   language: csharp
-        mono: 
-            - 3.10.0
-        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
-        install:
-            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
-            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
-        script:
-            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln
+        - sudo -E sh ./Scripts/build.sh
+
+# environment variables used in bash scripts
+        env:
+           global:
+           - UNITYCI_PROJECT_NAME="UnityProject"
+    -   language: csharp 
+        mono:  
+            - 3.10.0 
+        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
+        install: 
+            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
+            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
+        script: 
+            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
             - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
+    
