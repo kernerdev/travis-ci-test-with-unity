@@ -16,13 +16,6 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -nographics \
   -projectPath $(pwd)/travis \
   -testResults $(pwd)/travis/results.xml \
-  -silent-crashes \
-  -logFile $(pwd)/travis/unity.log \
-  -buildWindowsPlayer "$(pwd)/travis/Build/windows/$project.exe" \
 
 echo 'Logs from build'
-cat $(pwd)/travis/unity.log
-
-if grep -q "Scripts have compiler errors." "$(pwd)/travis/unity.log"; then
-  exit 1
-fi
+cat $(pwd)/travis/results.xml
