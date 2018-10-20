@@ -24,6 +24,6 @@ echo "Attempting to build $project for Windows"
 echo 'Logs from build'
 cat 
 
-#if grep -q "Scripts have compiler errors." "$(pwd)/travis/unity.log"; then
-#  exit 1
-#fi
+if grep -q "Scripts have compiler errors." "$(pwd)/travis/unity.log"; then
+  exit 1
+fi
