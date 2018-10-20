@@ -1,10 +1,10 @@
 matrix: 
     include: 
 # do not install anything extra onto the image
-    -   language: objective-c
+    -   language: general
 
 # use a Mac OSX image
-        os: osx
+        os: windows
 
 # only run builds on pushes to the master branch
         branches:
