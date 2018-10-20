@@ -9,7 +9,7 @@ ls -l
 cd ..
 
 echo "Attempting to build $project for Windows"
-sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
@@ -18,6 +18,7 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -buildWindowsPlayer "$(pwd)/travis/Build/windows/$project.exe" \
   -runEditorTests \
   -editorTestsResultFile $(pwd)/travis/test.xml \
+  -quit
 
 
 echo 'Logs from build'
