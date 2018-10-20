@@ -17,5 +17,7 @@ sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -projectPath $(pwd)/travis \
   -testResults $(pwd)/travis/results.xml \
 
+sleep 5s
+
 echo 'Logs from build'
 cat $(pwd)/travis/results.xml
