@@ -142,12 +142,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="travis.csproj">
-      <Project>{DB6C30ED-558D-ED00-5196-24DBF14EAB02}</Project>
-      <Name>travis</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Editor\NewEditModeTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
