@@ -2,7 +2,7 @@ matrix:
     include: 
     -   language: csharp 
         os: osx
-        #mono: latest 
+        mono: none
         dotnet: 2.1.300
         solution: DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
         env: MSBUILDENSURESTDOUTFORTASKPROCESSES=1
