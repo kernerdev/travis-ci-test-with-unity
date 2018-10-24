@@ -12,11 +12,11 @@ matrix:
                   - unity_branch
                   - csharp_branch
         install: 
-            - dotnet restore
             - nuget restore DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
             - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner 
             - nuget install NUnit.Engine -Version 3.9.0 -OutputDirectory testrunner 
         script: 
+            - dotnet restore
             - msbuild /p:Configuration=Release /p:Platform=x64 DummyBackendDotNetCore/DummyBackendDotNetCore.sln
             - dotnet test ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test.csproj --verbosity=normal /nodeReuse:false
             #- mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/x64/Release/netcoreapp2.1/DummyBackendDotNetCore_Test.dll
