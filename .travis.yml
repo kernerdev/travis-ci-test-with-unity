@@ -2,7 +2,7 @@ matrix:
     include: 
     -   language: csharp 
         os: osx
-        mono: latest 
+        #mono: latest 
         dotnet: 2.1.300
         solution: DummyBackendDotNetCore/DummyBackendDotNetCore.sln 
         
@@ -18,5 +18,5 @@ matrix:
         script: 
             - msbuild /p:Configuration=Release /p:Platform=x64 DummyBackendDotNetCore/DummyBackendDotNetCore.sln
             - dotnet test ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test.csproj
-            - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/x64/Release/netcoreapp2.1/DummyBackendDotNetCore_Test.dll
+            #- mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./DummyBackendDotNetCore/DummyBackendDotNetCore_Test/bin/x64/Release/netcoreapp2.1/DummyBackendDotNetCore_Test.dll
     
