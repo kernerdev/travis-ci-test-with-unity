@@ -1,7 +1,7 @@
 matrix:
     include:
     - os:linux
-      dist: trusty
-      sudo: required
-      install: sudo -E sh ./Scripts/install.sh
+      dist:trusty
+      sudo:required
+      install:sudo -E sh ./Scripts/install.sh
       
