@@ -4,4 +4,5 @@ matrix:
       dist:trusty
       sudo:required
       install:sudo -E sh ./Scripts/install.sh
+      script:sudo -E sh ./Scripts/build.sh
       
