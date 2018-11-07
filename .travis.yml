@@ -3,6 +3,5 @@ matrix:
     - os:linux
       dist: trusty
       sudo: required
-      install:
-      - sudo -E sh ./Scripts/install.sh
+      install: sudo -E sh ./Scripts/install.sh
       
