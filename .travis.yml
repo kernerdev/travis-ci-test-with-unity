@@ -1,6 +1,4 @@
-language: general 
-rvm: 
-- 2.2 
+language: general  
 before_install: 
 - chmod a+x ./Scripts/install.sh 
 - chmod a+x ./Scripts/build.sh 
