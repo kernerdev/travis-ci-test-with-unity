@@ -5,6 +5,7 @@ sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 libglib2.0-0:i3
 sudo apt-get --yes --force-yes install -f gconf-service libasound2 libc6 libc6-i386 libcairo2 libcap2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libfreetype6 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libgl1-mesa-glx libglib2.0-0 libglu1-mesa libgtk2.0-0 libnspr4 libnss3 libpango1.0-0 libstdc++6 libx11-6 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 zlib1g debconf glib-networking-services
 sudo apt-get update
 sudo apt-get install libsoup2.4-dev libsoup-gnome2.4-1 libsoup-gnome2.4-dev
+sudo updatedb
 locate libarchive*
 sudo ln -s /usr/lib/x86_64-linux-gnu/libarchive.so.13 /usr/lib/x86_64-linux-gnu/libarchive.so.13
 ls -l
