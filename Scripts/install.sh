@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo apt-get install libsoup2.4-1
+sudo apt-get --yes --force-yes install glib-networking
+sudo apt-get --yes --force-yes install libsoup2.4-1
 ls -l
 cd ..
 ls -l
