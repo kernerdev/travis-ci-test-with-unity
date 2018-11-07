@@ -1,43 +1,8 @@
-matrix: 
-    include: 
-# do not install anything extra onto the image
-    -   language: general
-
-# use a Mac OSX image
-        os: windows
-
-# only run builds on pushes to the master branch
-        branches:
-               only:
-                  - master
-                  - unity_branch
-                  - csharp_branch
-# run the script to download and install Unity editor
-        install:
-        - sudo -E sh ./Scripts/install.sh
-
-# run the script for unit tests and builds
-        script:
-        - sudo -E sh ./Scripts/build.sh
-
-# environment variables used in bash scripts
-        env:
-           global:
-           - UNITYCI_PROJECT_NAME="UnityProject"
-    -   language: csharp 
-        mono:  
-            - 4.1.1 
-        solution: DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-        
-        branches:
-               only:
-                  - master
-                  - unity_branch
-                  - csharp_branch
-        install: 
-            - nuget DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner 
-        script: 
-            - xbuild /p:Configuration=Release DummyBackendDotNetStandard/DummyBackendDotNetStandard.sln 
-            - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DummyBackendDotNetStandard/DummyBackendDotNetStandard_Test/bin/Release/MyProject.Tests.dll
-    
+matrix:
+    include:
+    - os:linux
+      dist: trusty
+      sudo: required
+      install:
+      - sudo -E sh ./Scripts/install.sh
+      
