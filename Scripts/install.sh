@@ -9,8 +9,7 @@ wget -O UnitySetup "https://beta.unity3d.com/download/dad990bf2728/UnitySetup-20
 ls -l
 sudo chmod 777 UnitySetup
 ls -l
-pwd
-sudo ./UnitySetup -u  --install-location=$(pwd) <<< 'y'
+sudo ./UnitySetup -u  --install-location=/home/travis/build/kernerdev/unityEditor <<< 'y'
 ls -l
 cd Editor
 ls -l
