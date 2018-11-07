@@ -1,10 +1,7 @@
 language:general 
 os:linux
 sudo:required
-before_install: 
-- chmod a+x ./Scripts/install.sh 
-- chmod a+x ./Scripts/build.sh 
-install: 
-- sudo -E sh ./Scripts/install.sh 
-script: 
-- sudo -E sh ./Scripts/build.sh
+before_install:chmod a+x ./Scripts/install.sh 
+chmod a+x ./Scripts/build.sh 
+install:sudo -E sh ./Scripts/install.sh 
+script:sudo -E sh ./Scripts/build.sh
