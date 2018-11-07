@@ -1,4 +1,4 @@
-language: general 
+language:general 
 os:linux
 sudo:required
 before_install: 
