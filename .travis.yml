@@ -1,4 +1,4 @@
-language: csharp 
+language: general 
 rvm: 
 - 2.2 
 before_install: 
