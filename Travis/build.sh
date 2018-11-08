@@ -24,11 +24,12 @@ if grep -q 'failed="0"' /Users/travis/build/kernerdev/wresults.xml
 then
 	echo "\n**************"
     echo "TEST PASSED \n"
-	echo "\n**************"
+	echo "**************"
 else
 	echo "\n**************"
     echo "TEST FAILED \n"
-	echo "\n**************"
+	echo "**************"
+	exit 1
 fi
  
 
