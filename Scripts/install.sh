@@ -10,6 +10,10 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libarchive.so.13 /usr/lib/x86_64-linux-gnu/
 ls -l
 cd ..
 ls -l
+mkdir game
+cd game
+git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-ci-test-with-unity.git kernerdev/travis-ci-test-with-unity
+cd ..
 mkdir unityEditor
 cd unityEditor
 ls -l
@@ -21,5 +25,5 @@ sudo ./UnitySetup -u  --install-location=/home/travis/build/kernerdev/unityEdito
 ls -l
 cd Editor
 ls -l
-cat "it is enough now"
-#sudo ./Unity -batchmode -projectPath "/home/kerner/New Unity Project" -runTests -testResults "/home/kerner/results.xml" -testPlatform editmode -nographics
+sudo ./Unity -batchmode -projectPath "/home/travis/build/kernerdev/game/travis" -runTests -testResults "/home/travis/build/kernerdev/results.xml" -testPlatform editmode -nographics
+cat /home/travis/build/kernerdev/results.xml
