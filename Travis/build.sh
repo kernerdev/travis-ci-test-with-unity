@@ -20,7 +20,12 @@ echo "Attempting to build $project for Windows"
  -runTests \
  -testResults "/Users/travis/build/kernerdev/wresults.xml" 
  
-cat /Users/travis/build/kernerdev/wresults.xml
+if grep -q 'failed="0"' /Users/travis/build/kernerdev/wresults.xml
+then
+    echo "TEST PASSED \n"
+fi
+ 
+
  
 
 # export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
