@@ -1,8 +1,24 @@
-language: csharp  
-before_install: 
-- chmod a+x ./Scripts/install.sh 
-- chmod a+x ./Scripts/build.sh 
-install: 
-- ./Scripts/install.sh 
-script: 
-- ./Scripts/build.sh
+language: objective-c
+
+branches:
+  only:
+  - master
+
+os: osx
+
+rvm:
+- 2.2
+
+cache:
+  directories:
+  - ./Unity
+
+before_install:
+- chmod a+x ./Travis/install.sh
+- chmod a+x ./Travis/build.sh
+
+install:
+- ./Travis/install.sh
+
+script:
+- ./Travis/build.sh
