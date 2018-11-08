@@ -22,7 +22,13 @@ echo "Attempting to build $project for Windows"
  
 if grep -q 'failed="0"' /Users/travis/build/kernerdev/wresults.xml
 then
+	echo "\n**************"
     echo "TEST PASSED \n"
+	echo "\n**************"
+else
+	echo "\n**************"
+    echo "TEST FAILED \n"
+	echo "\n**************"
 fi
  
 
