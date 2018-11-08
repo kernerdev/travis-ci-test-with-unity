@@ -16,7 +16,12 @@ echo "Attempting to build $project for Windows"
  -logFile \
  -projectPath $(pwd)/ \
  -executeMethod BuildScript.Windows \
- -quit
+ -testPlatform editmode
+ -runTests 
+ -testResults "/Users/travis/build/kernerdev/results.xml" 
+ 
+cat /Users/travis/build/kernerdev/results.xml
+ 
 
 #echo "Attempting to build $project for OS X"
 #/Applications/Unity/Unity.app/Contents/MacOS/Unity \
