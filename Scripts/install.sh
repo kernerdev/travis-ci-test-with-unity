@@ -26,4 +26,5 @@ ls -l
 cd Editor
 ls -l
 sudo ./Unity -batchmode -projectPath "/home/travis/build/kernerdev/game/travis" -runTests -testResults "/home/travis/build/kernerdev/results.xml" -testPlatform editmode -nographics
+cat ~/.config/unity3d/Editor.log
 cat /home/travis/build/kernerdev/results.xml
