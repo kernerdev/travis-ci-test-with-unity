@@ -18,35 +18,35 @@ echo "Attempting to build $project for Windows"
  -executeMethod BuildScript.Windows \
  -quit
 
-echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -executeMethod BuildScript.OSX \
- -quit
+#echo "Attempting to build $project for OS X"
+#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+# -batchmode \
+# -nographics \
+# -silent-crashes \
+# -logFile \
+# -projectPath $(pwd)/ \
+# -executeMethod BuildScript.OSX \
+# -quit
 
-echo "Attempting to build $project for Linux"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -executeMethod BuildScript.Linux \
- -quit
+#echo "Attempting to build $project for Linux"
+#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+# -batchmode \
+# -nographics \
+# -silent-crashes \
+# -logFile \
+# -projectPath $(pwd)/ \
+# -executeMethod BuildScript.Linux \
+# -quit
 
-echo "Attempting to build $project for WebGL"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -quit \
- -executeMethod BuildScript.WebGL
+#echo "Attempting to build $project for WebGL"
+#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+# -batchmode \
+# -nographics \
+# -silent-crashes \
+# -logFile \
+# -projectPath $(pwd)/ \
+# -quit \
+# -executeMethod BuildScript.WebGL
 
 # export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 # export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
@@ -74,7 +74,7 @@ echo "Attempting to build $project for WebGL"
 
 echo 'Attempting to zip builds'
 cd $(pwd)/Build
-tar -czvf linux.tar.gz linux/
-hdiutil create osx.dmg -srcfolder osx/ -ov
+#tar -czvf linux.tar.gz linux/
+#hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
 # zip -r ios.zip ios/
