@@ -23,42 +23,6 @@ echo "Attempting to build $project for Windows"
 cat /Users/travis/build/kernerdev/wresults.xml
  
 
-echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -executeMethod BuildScript.OSX \
- -testPlatform editmode \
- -runTests \
- -testResults "/Users/travis/build/kernerdev/oresults.xml" 
-
-echo "Attempting to build $project for Linux"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -executeMethod BuildScript.Linux \
- -testPlatform editmode
- -runTests 
- -testResults "/Users/travis/build/kernerdev/lresults.xml" 
-
-echo "Attempting to build $project for WebGL"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- -batchmode \
- -nographics \
- -silent-crashes \
- -logFile \
- -projectPath $(pwd)/ \
- -testPlatform editmode \
- -runTests \
- -testResults "/Users/travis/build/kernerdev/wresults.xml"  \
- -executeMethod BuildScript.WebGL
-
 # export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 # export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 # export JAVA_HOME=$(/usr/libexec/java_home)
@@ -85,7 +49,7 @@ echo "Attempting to build $project for WebGL"
 
 echo 'Attempting to zip builds'
 cd $(pwd)/Build
-tar -czvf linux.tar.gz linux/
-hdiutil create osx.dmg -srcfolder osx/ -ov
+#tar -czvf linux.tar.gz linux/
+#hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
 # zip -r ios.zip ios/
