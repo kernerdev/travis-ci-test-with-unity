@@ -12,7 +12,7 @@ cd ..
 ls -l
 mkdir game
 cd game
-git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-ci-test-with-unity.git kernerdev/travis-ci-test-with-unity
+git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-ci-test-with-unity.git kernerdev/game
 cd ..
 mkdir unityEditor
 cd unityEditor
