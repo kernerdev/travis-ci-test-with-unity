@@ -7,6 +7,9 @@ project="Travis-Unity"
 # DATE=`date +%y.%m.%d`
 # versionName="a.${DATE}"
 
+mkdir unity_branch
+cd unity_branch
+git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-ci-test-with-unity.git
 
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
@@ -14,13 +17,13 @@ echo "Attempting to build $project for Windows"
  -nographics \
  -silent-crashes \
  -logFile \
- -projectPath $(pwd)/ \
+ -projectPath $(pwd)/unity_branch/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
  -testResults "/Users/travis/build/kernerdev/wresults.xml" 
  
-if grep -q 'failed="0"' /Users/travis/build/kernerdev/wresults.xml
+if grep -q 'failed="0"' /Users/travis/build/kernerdev/unity_branch/wresults.xml
 then
 	echo "\n**************"
     echo "TEST PASSED \n"
@@ -60,7 +63,7 @@ fi
 #   -executeMethod BuildScript.iOS
 
 echo 'Attempting to zip builds'
-cd $(pwd)/Build
+cd $(pwd)/unity_branch/Build
 #tar -czvf linux.tar.gz linux/
 #hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
