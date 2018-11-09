@@ -17,11 +17,11 @@ echo "Attempting to build $project for Windows"
  -nographics \
  -silent-crashes \
  -logFile \
- -projectPath $(pwd)/unity_branch/ \
+ -projectPath /Users/travis/build/kernerdev/unity_branch/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
- -testResults "/Users/travis/build/kernerdev/wresults.xml" 
+ -testResults "/Users/travis/build/kernerdev/unity_branch/wresults.xml" 
  
 if grep -q 'failed="0"' /Users/travis/build/kernerdev/unity_branch/wresults.xml
 then
