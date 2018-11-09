@@ -17,7 +17,7 @@ echo "Attempting to build $project for Windows"
  -nographics \
  -silent-crashes \
  -logFile \
- -projectPath /Users/travis/build/kernerdev/unity_branch/ \
+ -projectPath "/Users/travis/build/kernerdev/unity_branch/" \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
