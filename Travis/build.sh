@@ -70,7 +70,7 @@ fi
 #   -executeMethod BuildScript.iOS
 
 echo 'Attempting to zip builds'
-cd /Build
+cd Build
 #tar -czvf linux.tar.gz linux/
 #hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
