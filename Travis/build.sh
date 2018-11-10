@@ -15,7 +15,6 @@ echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
  -batchmode \
  -nographics \
- -silent-crashes \
  -logFile \
  -projectPath "/Users/travis/build/kernerdev/unity_branch/" \
  -executeMethod BuildScript.Windows \
