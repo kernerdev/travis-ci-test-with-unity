@@ -18,8 +18,7 @@ cd travis-ci-test-with-unity
 unity_project_path=$(pwd)
 ls -l
 
-
-echo "Attempting to run test build $project for Windows"
+echo "Attempting to run test $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
  -batchmode \
  -nographics \
@@ -35,20 +34,11 @@ if grep -q 'failed="0"' "$init_path/wresults.xml"
 then
 	echo "\n**************"
     	echo "TEST PASSED"
-	echo "**************"
-	echo "Attempting to build $project for Windows"
-	#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- 	#-batchmode \
- 	#-nographics \
- 	#-silent-crashes \
- 	#-logFile \
- 	#-projectPath $unity_project_path/ \
- 	#-executeMethod BuildScript.Windows \
- 	#-quit
+	echo "**************\n"
 else
 	echo "\n**************"
     echo "TEST FAILED"
-	echo "**************"
+	echo "**************\n"
 	exit 1
 fi
  
