@@ -30,18 +30,9 @@ echo "Attempting to run test $project for Windows"
  -runTests \
  -testResults "$init_path/wresults.xml" 
  
-if grep -q 'failed="0"' "$init_path/wresults.xml"
-then
-	echo "\n**************"
-    	echo "TEST PASSED"
-	echo "**************\n"
-else
-	echo "\n**************"
-    echo "TEST FAILED"
-	echo "**************\n"
-	exit 1
-fi
  
+$init_path/Travis/unity_test_parser.sh $init_path/wresults.xml
+
 
  
 
