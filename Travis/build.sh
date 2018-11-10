@@ -13,13 +13,15 @@ git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-c
 
 pwd
 ls -l
+cd travis-ci-test-with-unity
+ls -l
 
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
  -batchmode \
  -nographics \
  -logFile \
- -projectPath $(pwd)/ \
+ -projectPath /Users/travis/build/kernerdev/travis-ci-test-with-unity/unity_branch/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
