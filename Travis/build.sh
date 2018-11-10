@@ -24,13 +24,13 @@ echo "Attempting to build $project for Windows"
  -batchmode \
  -nographics \
  -logFile \
- -projectPath $(unity_project_path)/ \
+ -projectPath $unity_project_path/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
- -testResults "$(init_path)/wresults.xml" 
+ -testResults "$init_path/wresults.xml" 
  
-if grep -q 'failed="0"' "{$init_path}/wresults.xml"
+if grep -q 'failed="0"' "$init_path/wresults.xml"
 then
 	echo "\n**************"
     echo "TEST PASSED \n"
@@ -70,7 +70,7 @@ fi
 #   -executeMethod BuildScript.iOS
 
 echo 'Attempting to zip builds'
-cd $(unity_project_path)/unity_branch/Build
+cd $unity_project_path/unity_branch/Build
 #tar -czvf linux.tar.gz linux/
 #hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
