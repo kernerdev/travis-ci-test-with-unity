@@ -68,7 +68,8 @@ fi
 #   -projectPath $(pwd)/ \
 #   -quit \
 #   -executeMethod BuildScript.iOS
-
+pwd
+ls -l
 echo 'Attempting to zip builds'
 cd Build
 #tar -czvf linux.tar.gz linux/
