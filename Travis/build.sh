@@ -24,6 +24,7 @@ echo "Attempting to build $project for Windows"
  -batchmode \
  -nographics \
  -logFile \
+ -silent-crashes \
  -projectPath $unity_project_path/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
@@ -68,7 +69,11 @@ fi
 #   -projectPath $(pwd)/ \
 #   -quit \
 #   -executeMethod BuildScript.iOS
+echo "$init_path"
+ls -l $init_path
 pwd
+ls -l
+cd Assets
 ls -l
 echo 'Attempting to zip builds'
 cd Build
