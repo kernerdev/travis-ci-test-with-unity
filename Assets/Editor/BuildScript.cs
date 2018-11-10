@@ -8,11 +8,9 @@ public class BuildScript {
     }
 
     static string[] GetScenePaths () {
-        string[] scenes = new string[EditorBuildSettings.scenes.Length];
+        string[] scenes = new string[1];
 
-        for (int i = 0; i < scenes.Length; i++) {
-            scenes[i] = EditorBuildSettings.scenes[i].path;
-        }
+        scenes[0] = "Assets/_Projeto/Scenes/Scene.unity";
 
         return scenes;
     }
