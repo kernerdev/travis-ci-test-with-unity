@@ -37,14 +37,14 @@ then
     	echo "TEST PASSED"
 	echo "**************"
 	echo "Attempting to build $project for Windows"
-	/Applications/Unity/Unity.app/Contents/MacOS/Unity \
- 	-batchmode \
- 	-nographics \
- 	-silent-crashes \
- 	-logFile \
- 	-projectPath $unity_project_path/ \
- 	-executeMethod BuildScript.Windows \
- 	-quit
+	#/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+ 	#-batchmode \
+ 	#-nographics \
+ 	#-silent-crashes \
+ 	#-logFile \
+ 	#-projectPath $unity_project_path/ \
+ 	#-executeMethod BuildScript.Windows \
+ 	#-quit
 else
 	echo "\n**************"
     echo "TEST FAILED"
