@@ -19,7 +19,7 @@ unity_project_path=$(pwd)
 ls -l
 
 
-echo "Attempting to build $project for Windows"
+echo "Attempting to run test build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
  -batchmode \
  -nographics \
@@ -34,11 +34,20 @@ echo "Attempting to build $project for Windows"
 if grep -q 'failed="0"' "$init_path/wresults.xml"
 then
 	echo "\n**************"
-    echo "TEST PASSED \n"
+    	echo "TEST PASSED"
 	echo "**************"
+	echo "Attempting to build $project for Windows"
+	/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+ 	-batchmode \
+ 	-nographics \
+ 	-silent-crashes \
+ 	-logFile \
+ 	-projectPath $unity_project_path/ \
+ 	-executeMethod BuildScript.Windows \
+ 	-quit
 else
 	echo "\n**************"
-    echo "TEST FAILED \n"
+    echo "TEST FAILED"
 	echo "**************"
 	exit 1
 fi
@@ -72,8 +81,6 @@ fi
 echo "$init_path"
 ls -l $init_path
 pwd
-ls -l
-cd Assets
 ls -l
 echo 'Attempting to zip builds'
 cd Build
