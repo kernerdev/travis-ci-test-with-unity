@@ -11,18 +11,21 @@ mkdir unity_branch
 cd unity_branch
 git clone --depth=50 --branch=unity_branch https://github.com/kernerdev/travis-ci-test-with-unity.git
 
+pwd
+ls -l
+
 echo "Attempting to build $project for Windows"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
  -batchmode \
  -nographics \
  -logFile \
- -projectPath "/Users/travis/build/kernerdev/unity_branch/" \
+ -projectPath $(pwd)/ \
  -executeMethod BuildScript.Windows \
  -testPlatform editmode \
  -runTests \
- -testResults "/Users/travis/build/kernerdev/unity_branch/wresults.xml" 
+ -testResults "/Users/travis/build/kernerdev/wresults.xml" 
  
-if grep -q 'failed="0"' /Users/travis/build/kernerdev/unity_branch/wresults.xml
+if grep -q 'failed="0"' /Users/travis/build/kernerdev/wresults.xml
 then
 	echo "\n**************"
     echo "TEST PASSED \n"
