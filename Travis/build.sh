@@ -70,7 +70,7 @@ fi
 #   -executeMethod BuildScript.iOS
 
 echo 'Attempting to zip builds'
-cd $unity_project_path/unity_branch/Build
+cd $unity_project_path/Build
 #tar -czvf linux.tar.gz linux/
 #hdiutil create osx.dmg -srcfolder osx/ -ov
 zip -r windows.zip windows/
