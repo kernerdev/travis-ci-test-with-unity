@@ -3,6 +3,7 @@ language: objective-c
 branches:
   only:
   - master
+  - xunit_dotnet_core
 
 os: osx
 
