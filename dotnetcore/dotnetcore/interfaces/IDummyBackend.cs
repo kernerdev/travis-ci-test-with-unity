@@ -20,5 +20,11 @@
         /// </summary>
         /// <returns></returns>
         string GetStuff();
+
+        /// <summary>
+        /// Do stuff with the string
+        /// </summary>
+        /// <returns></returns>
+        void DoStuff(string stuffstr);
     }
 }

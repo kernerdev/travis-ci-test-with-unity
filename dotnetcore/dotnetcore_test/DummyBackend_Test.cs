@@ -35,5 +35,20 @@ namespace dotnetcore_test
 
             Assert.Equal(TEST_INPUT, retValue);
         }
+
+        [Fact]
+        public void DummyBackend_DoStuff_Test()
+        {
+            const string TEST_INPUT = "TEST_STRING";
+
+            Mock<IDummyComponent> mockComponent = new Mock<IDummyComponent>(MockBehavior.Strict);
+            mockComponent.Setup(x => x.DoStuff(It.IsAny<string>()));
+
+            IDummyBackend backend = new DummyBackend(mockComponent.Object);
+
+            backend.DoStuff(TEST_INPUT);
+
+            mockComponent.Verify(x => x.DoStuff(TEST_INPUT), Times.Once());
+        }
     }
 }
