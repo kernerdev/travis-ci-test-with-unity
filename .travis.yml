@@ -9,7 +9,7 @@ branches:
   - xunit_dotnet_core
 
 install:
-- dotnet restore
+- dotnet restore dotnetcore/dotnetcore.sln -v n
 
 script:
 - dotnet build dotnetcore/dotnetcore.sln -v n
