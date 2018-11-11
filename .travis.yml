@@ -25,15 +25,3 @@ install:
 script:
 - ./Travis/build.sh
 
-after_success:
-- ./Travis/tag.sh
-
-deploy:
-- provider: releases
-  api_key: b6b06bc81cc93f535a9b2e314c06f6035c6bd462
-  file: 
-  - ./Users/travis/build/kernerdev/travis-ci-test-with-unity/unity_branch/travis-ci-test-with-unity/Build/windows.zip
-  name: $TRAVIS_BRANCH $(date +'%Y.%m.%d %H:%M')
-  skip_cleanup: true
-  on:
-    all_branches: true
