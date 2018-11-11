@@ -1,27 +1,17 @@
-language: objective-c
+language: csharp
+dist: trusty
+mono: none
+dotnet: 2.1
 
 branches:
   only:
   - master
-
-os: osx
-
-rvm:
-- 2.2
-
-cache:
-  directories:
-  - ./Unity
-
-before_install:
-- chmod a+x ./Travis/install.sh
-- chmod a+x ./Travis/build.sh
-- chmod a+x ./Travis/tag.sh
-- chmod a+x ./Travis/unity_test_parser.sh
+  - xunit_dotnet_core
 
 install:
-- ./Travis/install.sh
+- dotnet restore
 
 script:
-- ./Travis/build.sh
+- dotnet build
+- dotnet test dotnetcore/dotnetcore_test/dotnetcore_test.csproj
 
