@@ -12,6 +12,6 @@ install:
 - dotnet restore
 
 script:
-- dotnet build
-- dotnet test dotnetcore/dotnetcore_test/dotnetcore_test.csproj
+- dotnet build dotnetcore/dotnetcore.sln -v n
+- dotnet test dotnetcore/dotnetcore_test/dotnetcore_test.csproj -v n
 
