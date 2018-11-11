@@ -16,6 +16,7 @@ cache:
 before_install:
 - chmod a+x ./Travis/install.sh
 - chmod a+x ./Travis/build.sh
+- chmod a+x ./Travis/tag.sh
 - chmod a+x ./Travis/unity_test_parser.sh
 
 install:
@@ -23,3 +24,16 @@ install:
 
 script:
 - ./Travis/build.sh
+
+after_success:
+- ./Travis/tag.sh
+
+deploy:
+- provider: releases
+  api_key: $GIT_TOKEN
+  file: 
+  - ./Users/travis/build/kernerdev/travis-ci-test-with-unity/unity_branch/travis-ci-test-with-unity/Build/windows.zip
+  name: $TRAVIS_BRANCH $(date +'%Y.%m.%d %H:%M')
+  skip_cleanup: true
+  on:
+    all_branches: true
