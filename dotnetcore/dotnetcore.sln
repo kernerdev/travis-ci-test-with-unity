@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetcore", "dotnetcore\dotnetcore.csproj", "{4875518C-4023-404E-BEEF-21F02DB3E7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnetcore_test", "dotnetcore_test\dotnetcore_test.csproj", "{3EB5EA3E-6EB4-4BC8-9504-EEB0C43D2E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4875518C-4023-404E-BEEF-21F02DB3E7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4875518C-4023-404E-BEEF-21F02DB3E7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4875518C-4023-404E-BEEF-21F02DB3E7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4875518C-4023-404E-BEEF-21F02DB3E7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EB5EA3E-6EB4-4BC8-9504-EEB0C43D2E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EB5EA3E-6EB4-4BC8-9504-EEB0C43D2E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EB5EA3E-6EB4-4BC8-9504-EEB0C43D2E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EB5EA3E-6EB4-4BC8-9504-EEB0C43D2E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F705898-0444-4479-AF84-E9D766E3B167}
+	EndGlobalSection
+EndGlobal
