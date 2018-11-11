@@ -1,4 +1,5 @@
-﻿using dotnetcore.backend.interfaces;
+﻿using System;
+using dotnetcore.backend.interfaces;
 
 namespace dotnetcore.backend
 {
@@ -14,9 +15,17 @@ namespace dotnetcore.backend
         public string Text { get; set; }
         public int Add(int a, int b)
         {
-            myComponent.DoStuff();
-
             return a + b;
+        }
+
+        public void DoStuff(string stuffstr)
+        {
+            if(string.IsNullOrEmpty(stuffstr))
+            {
+                throw new ArgumentException("Parameter shall not be null or empty", nameof(stuffstr));
+            }
+
+            myComponent.DoStuff(stuffstr);
         }
 
         public string GetStuff()

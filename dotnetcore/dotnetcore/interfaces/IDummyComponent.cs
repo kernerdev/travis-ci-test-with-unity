@@ -2,7 +2,7 @@
 {
     public interface IDummyComponent
     {
-        void DoStuff();
+        void DoStuff(string stuffstr);
 
         string GetStuff();
     }

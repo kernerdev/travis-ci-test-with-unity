@@ -4,7 +4,7 @@ namespace dotnetcore.backend
 {
     internal class DummyComponent : IDummyComponent
     {
-        public void DoStuff()
+        public void DoStuff(string stuffstr)
         {
             
         }
