@@ -11,13 +11,7 @@ namespace dotnetcore.backend
             myComponent = component;
         }
 
-        private string myText;
-        public string Text
-        {
-            get { return "ASDASD_WRONG_STRING"; }
-            set { myText = value; }
-        }
-
+        public string Text { get; set; }
         public int Add(int a, int b)
         {
             myComponent.DoStuff();
