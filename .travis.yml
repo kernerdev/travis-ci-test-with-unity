@@ -30,7 +30,7 @@ after_success:
 
 deploy:
 - provider: releases
-  api_key: $GIT_TOKEN
+  api_key: 7c01d71ab9050c309e40ed1de7ccf11069ec72cd
   file: 
   - ./Users/travis/build/kernerdev/travis-ci-test-with-unity/unity_branch/travis-ci-test-with-unity/Build/windows.zip
   name: $TRAVIS_BRANCH $(date +'%Y.%m.%d %H:%M')
