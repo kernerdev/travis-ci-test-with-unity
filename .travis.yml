@@ -15,9 +15,7 @@ before_install:
 install:
 - dotnet restore dotnetcore/dotnetcore.sln -v n
 
-build:
+script:
 - dotnet build dotnetcore/dotnetcore.sln -v n
 - dotnet test dotnetcore/dotnetcore_test/dotnetcore_test.csproj -v n
-
-release:
 - ./Travis/tag.sh
