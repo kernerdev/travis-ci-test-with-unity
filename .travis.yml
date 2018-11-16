@@ -8,6 +8,10 @@ branches:
   - master
   - xunit_dotnet_core
 
+before_install:
+- chmod a+x ./Travis/tag.sh
+- chmod a+x ./Travis/tag_incrementer.sh
+  
 install:
 - dotnet restore dotnetcore/dotnetcore.sln -v n
 
@@ -15,3 +19,5 @@ script:
 - dotnet build dotnetcore/dotnetcore.sln -v n
 - dotnet test dotnetcore/dotnetcore_test/dotnetcore_test.csproj -v n
 
+release:
+- ./Travis/tag.sh

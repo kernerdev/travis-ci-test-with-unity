@@ -2,4 +2,10 @@
 
 git config --local user.name "traviscibot"
 git config --local user.email "traviscibot@travisci.org"
-git tag "v$(date +'%Y.%m.%d.%H%M')-$TRAVIS_BRANCH"
+./tag_incrementer.sh $TRAVIS_BRANCH ../versions.txt 
+version=$(cat ../versions.txt)
+git add ../version.txt
+git commit -m "version update $version"
+git push
+git tag "$version"
+git push --tags
