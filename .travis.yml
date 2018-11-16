@@ -23,4 +23,4 @@ script:
 - ls -l
 - cd Travis
 - ls -l
-- tag.sh
+- ./tag.sh
