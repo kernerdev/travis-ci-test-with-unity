@@ -1,4 +1,8 @@
-dist: trusty
+os: osx
+
+rvm:
+- 2.2
+
 sudo: required
 
 branches:
